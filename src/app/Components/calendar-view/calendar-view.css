@@ -1,0 +1,7 @@
+.month-view{
+    width: 80%;
+    max-width: 1200px;
+    background-color: aliceblue;
+    flex-direction: column;
+    flex-wrap: wrap;
+}

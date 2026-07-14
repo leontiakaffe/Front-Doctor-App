@@ -1,0 +1,15 @@
+@if (activeTab === 'login') {
+  <app-auth-layout>
+    <app-login (loginSuccess)="onLoginSuccess()" (goToCreateAccount)="onGoToCreateAccount()"></app-login>
+  </app-auth-layout>
+} @else if (activeTab === 'identification') {
+  <app-auth-layout>
+    <app-identification></app-identification>
+  </app-auth-layout>
+} @else if (activeTab === 'create-account') {
+  <app-auth-layout>
+    <app-create-account></app-create-account>
+  </app-auth-layout>
+} @else if (activeTab === 'calendar') {
+  <app-calendar></app-calendar>
+}
