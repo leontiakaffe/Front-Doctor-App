@@ -1,8 +1,13 @@
-<div class="container soft-corners">
-<h1 class="center " >LOG IN</h1> 
-<input [(ngModel)]="username" placeholder="Username" class="mg-2"> <br>
-<input [(ngModel)]="password" type="password" placeholder="Password" class="mg-2"> <br>
-<button (click)="onLogin()" class="mg-2">Είσοδος</button>
-<p class="mg-2">Δεν έχεις λογαριασμό; <a (click)="onCreateAccountClick()" >Δημιουργία λογαριασμού</a></p>
+<div class="container soft-corners2 light-pink shadow">
+<h1 class="center login-letters pd  " >LOG IN</h1> 
+<input [(ngModel)]="username" placeholder="Username" class="mt-4 soft-corners"> <br>
+<input [(ngModel)]="password" type="password" placeholder="Password" class="mt-2 soft-corners"> <br>
+<button (click)="onLogin()" class="mt-2 darker-green soft-corners shadow">Enter</button>
+<p class="mt-4">Don't have an account? 
+<br>
+<a (click)="onCreateAccountClick()" >Create one here!</a></p>
+</div>
+<div class="light-pink mt-2 shadow soft-corners">
+    <p>Here as a doctor you can handle your appointment schedule</p>
 </div>
 

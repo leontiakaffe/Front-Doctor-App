@@ -1,0 +1,34 @@
+<p>Are you a doctor? Please identify yourself</p>
+
+<div class="light-pink container soft-corners2">
+    <div>
+        <p>Identification</p>
+        <span>SSN:</span><input [(ngModel)]="ssn" placeholder="" class="mt-1 soft-corners"> <br>
+        <span>MLN:</span><input [(ngModel)]="mln"  placeholder="" class="mt-1 soft-corners">
+    </div>
+    
+    <form class="mt-2">
+        <p>Choose how to verify yourself</p>
+
+        <label >
+            <input type="radio" name="Phone" value="phone" checked>
+            Phone
+        </label>
+
+        <label class="mt-2">
+            <input type="radio" name="Email" value="email" >
+            Email
+        </label>
+    </form>
+
+    <div>
+        <p>Enter the code</p>
+        <input [(ngModel)] = "secretcode">
+        <br>
+        <button>Submit</button>
+    </div>
+    
+</div>
+
+
+

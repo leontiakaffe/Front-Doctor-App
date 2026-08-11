@@ -1,5 +1,8 @@
-*{
-    display: flex;
-    
-    justify-content: flex-start;
+.main-content{
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Οριζόντιο κεντράρισμα */
+  align-items: center;     /* Κατακόρυφο κεντράρισμα */
+  width: 100vw;            /* 100% του πλάτους της οθόνης */
+  height: 100vh;
 }
