@@ -8,5 +8,6 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './create-account.css',
 })
 export class CreateAccount {
- 
+ username = ' ';
+ password = ' ';
 }

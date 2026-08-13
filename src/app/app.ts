@@ -18,6 +18,7 @@ export class App {
 
   activeTab: TabType = 'login';
   isAuthorized: boolean = false;
+  isIdentified: boolean = false;
 
   setTab(tab: TabType ){
     this.activeTab = tab;
@@ -28,7 +29,17 @@ export class App {
     this.activeTab = 'calendar'
   }
 
+  onIdentificationSuccess(){
+    this.isIdentified = true;
+    this.activeTab = 'create-account'
+  }
+
   onGoToCreateAccount(){
     this.activeTab = 'identification'; // try to do how to go directly to create account if identification is already a success(saved cookie?)
+  }
+
+  onGoToCreateAccountStage2(){
+    this.activeTab = 'create-account';
+    
   }
 }

@@ -1,17 +1,17 @@
 <div class="main-div">
-  <div class="calendar-wrapper">
-  <mwl-calendar-month-view
+  <div >
+  <mwl-calendar-month-view 
     [viewDate]="viewDate"
     [events]="events"
     (dayClicked)="dayClicked($event.day)">
   </mwl-calendar-month-view>
 </div>
 
-<div class="misc-div green">
+<div class="misc-div light-pink">
   <div class="w-100 h-20 red">
     <h3>Μικρογραφία ημερολόγιου</h3>
   </div>
-  <div class="appointment-details w-100 h-20 yellow">
+  <div class="appointment-details w-100 h-20 light-pink">
     <h3>Λεπτομέρειες</h3>
     @if (selectedDayEvents.length > 0) {
       @for (event of selectedDayEvents; track event.title) {
@@ -22,7 +22,7 @@
     }
   </div>
 
-  <div class="w-100 h-60 blue">
+  <div class="w-100 h-60 light-pink">
     <h3>Εκκρεμότητες</h3>
   </div>
 </div>

@@ -1,9 +1,22 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 .container{
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     height: 60vh;
     width: 58vh;
+    gap:1%;
+    
+}
+
+.pt2{
+    padding-top: 2rem;
 }
 
 .mt-2{
@@ -15,12 +28,13 @@
 }
 
 .mt-4{
-    margin-top: 4 rem;
+    margin-top: 4rem;
+} 
+
+.ml-2{
+    margin-left: 2rem;
 }
 
-.pd{
-    padding-top: 1.5rem;
-}
 
 .soft-corners{
     border-radius: 12px;
@@ -48,4 +62,27 @@
 
 .insight-shadow{
   box-shadow: inset 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 300px;           
+    height:400px;
+    font-size: x-small;
+    
+}
+}
+
+@media(min-width:992px){
+    .container{
+    width: 450px;           
+    height:480px;
+    }
+}
+
+@media(min-width:1400px){
+    .container{
+    width: 26vw;           
+    height:55vh;
+    }
 }

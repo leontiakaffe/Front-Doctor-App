@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,7 +10,36 @@ import { FormsModule } from '@angular/forms';
 })
 export class Identification {
   ssn = ' ';
-  mln = ' ';
+  vat = ' ';
   secretcode = ' ';
+  codeSentMessageVisible = false;
+
+  @Output() goToCreateAccountStage2 = new EventEmitter<void>();
+  @Output() identificationSuccess = new EventEmitter<void>();
+
+  onIdentification(){
+    const isValid = true; //why javascript?
+
+    if(isValid){
+      this.identificationSuccess.emit();
+    }else{
+      console.log('Λάθος στοιχεία'); //try other way
+    }
+  }
+
+  onVerifyUserClick(){
+    this.goToCreateAccountStage2.emit();
+  }
+
+  sendCode(){
+    this.codeSentMessageVisible = true;
+
+    this.secretcode = '123456';
+
+  setTimeout(() => {
+    this.codeSentMessageVisible = false;
+  }, 4000);
+  }
+
 
 }

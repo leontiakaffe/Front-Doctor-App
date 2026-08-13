@@ -1,8 +1,16 @@
+.top-nav{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
 .main-content{
   margin: 0;
   display: flex;
   justify-content: center; /* Οριζόντιο κεντράρισμα */
   align-items: center;     /* Κατακόρυφο κεντράρισμα */
-  width: 100vw;            /* 100% του πλάτους της οθόνης */
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
 }
+

@@ -1,11 +1,11 @@
-<div class="top-nav">
+<div class="top-nav basic-green pt2">
   <button (click)="setTab('calendar-view')">Ημερολόγιο</button>
   <button (click)="setTab('patients')">Ασθενείς</button>
   <button (click)="setTab('statistics')">Στατιστικά</button>
   <button (click)="setTab('pending')">Εκκρεμότητες</button>
 </div>
 
-<div class="content main-content">
+<div class="content main-content basic-green">
   @if (activeTab === 'calendar-view') {
     <app-calendar-view></app-calendar-view>
   } @else if (activeTab === 'patients') {

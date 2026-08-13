@@ -1,34 +1,50 @@
-<p>Are you a doctor? Please identify yourself</p>
+<!-- <p>Are you a doctor? Please identify yourself</p> -->
 
-<div class="light-pink container soft-corners2">
+<div class="light-pink identification-container soft-corners2">
     <div>
-        <p>Identification</p>
-        <span>SSN:</span><input [(ngModel)]="ssn" placeholder="" class="mt-1 soft-corners"> <br>
-        <span>MLN:</span><input [(ngModel)]="mln"  placeholder="" class="mt-1 soft-corners">
+        <p>Ταυτοποίηση</p>
+        <span>ΑΜΚΑ</span>
+        <br>
+        <input [(ngModel)]="ssn"  class="mt-1 soft-corners"> 
+        <br>
+        <span>ΑΦΜ</span>
+        <br>
+        <input [(ngModel)]="vat"   class="mt-1 soft-corners">
     </div>
     
     <form class="mt-2">
-        <p>Choose how to verify yourself</p>
+        <p>Επιβεβαίωση μέσω</p>
 
         <label >
-            <input type="radio" name="Phone" value="phone" checked>
-            Phone
+            <input  type="radio" name="Phone" value="phone" checked>
+            Τηλέφωνο
         </label>
 
-        <label class="mt-2">
+        <label class="ml-2" >
             <input type="radio" name="Email" value="email" >
             Email
         </label>
+        <br>
+        <button (click) = "sendCode()">Αποστολή κωδικού</button>
+        
     </form>
 
     <div>
-        <p>Enter the code</p>
-        <input [(ngModel)] = "secretcode">
+        <p>Κωδικός επιβεβαίωσης</p>
+        <input [(ngModel)] = "secretcode" class="soft-corners" >
         <br>
-        <button>Submit</button>
+        <button (click)="onVerifyUserClick()">Επιβεβαίωση</button>
     </div>
     
 </div>
+
+@if (codeSentMessageVisible) {
+  <div class="pop-app-text">
+    <p>Σας έχει σταλεί κωδικός επιβεβαίωσης</p>
+  </div>
+}
+
+
 
 
 

@@ -4,11 +4,11 @@
   </app-auth-layout>
 } @else if (activeTab === 'identification') {
   <app-auth-layout>
-    <app-identification></app-identification>
+    <app-identification (onIdentification) = "onIdentificationSuccess()" (goToCreateAccountStage2) = "onGoToCreateAccountStage2()"></app-identification>
   </app-auth-layout>
 } @else if (activeTab === 'create-account') {
-  <app-auth-layout>
-    <app-create-account></app-create-account>
+  <app-auth-layout >
+    <app-create-account ></app-create-account>
   </app-auth-layout>
 } @else if (activeTab === 'calendar') {
   <app-calendar></app-calendar>
