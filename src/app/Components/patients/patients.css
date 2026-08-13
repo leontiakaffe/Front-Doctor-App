@@ -1,0 +1,11 @@
+.patients-container{
+    display: flex;
+    height: 80%;
+    width: 80%;
+    
+}
+
+first-box{
+    height: 80vh;
+    width: 20vw;
+}

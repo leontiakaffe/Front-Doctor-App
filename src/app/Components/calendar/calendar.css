@@ -1,16 +1,21 @@
 .top-nav{
   display: flex;
   justify-content: center;
-  gap: 1rem;
   width: 100%;
+  height: 10vh;
+  gap:2rem;
+  padding-bottom: 2rem;
 }
 
-.main-content{
-  margin: 0;
+.main-content{ 
+  padding: 3rem 10rem;
   display: flex;
-  justify-content: center; /* Οριζόντιο κεντράρισμα */
-  align-items: center;     /* Κατακόρυφο κεντράρισμα */
+  /* justify-content: center;  
+  align-items: center;       */
   width: 100%;
   min-height: 100vh;
+  
 }
+
+
 

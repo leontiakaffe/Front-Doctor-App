@@ -1,31 +1,31 @@
 <div class="main-div">
-  <div >
-  <mwl-calendar-month-view 
+  
+  <mwl-calendar-month-view class="w-70"
     [viewDate]="viewDate"
     [events]="events"
     (dayClicked)="dayClicked($event.day)">
   </mwl-calendar-month-view>
-</div>
 
-<div class="misc-div light-pink">
-  <div class="w-100 h-20 red">
-    <h3>Μικρογραφία ημερολόγιου</h3>
-  </div>
-  <div class="appointment-details w-100 h-20 light-pink">
-    <h3>Λεπτομέρειες</h3>
-    @if (selectedDayEvents.length > 0) {
-      @for (event of selectedDayEvents; track event.title) {
-        <p>{{ event.title }}</p>
+
+  <div class="misc-div light-pink w-30">
+    <div class="w-100 h-20 red">
+      <h3>Μικρογραφία ημερολόγιου</h3>
+    </div>
+    <div class="appointment-details w-100 h-20 light-pink">
+      <h3>Λεπτομέρειες</h3>
+      @if (selectedDayEvents.length > 0) {
+        @for (event of selectedDayEvents; track event.title) {
+          <p>{{ event.title }}</p>
+        }
+      } @else {
+        <p>Επίλεξε μια μέρα για να δεις τα ραντεβού.</p>
       }
-    } @else {
-      <p>Επίλεξε μια μέρα για να δεις τα ραντεβού.</p>
-    }
-  </div>
+    </div>
 
-  <div class="w-100 h-60 light-pink">
-    <h3>Εκκρεμότητες</h3>
+    <div class="w-100 h-60 light-pink">
+      <h3>Εκκρεμότητες</h3>
+    </div>
   </div>
-</div>
 </div>
 
 

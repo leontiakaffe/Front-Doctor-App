@@ -8,6 +8,8 @@
 
 .main-div{
     display:flex;
+    width: 1600px;
+    
     
 }
 
@@ -23,8 +25,16 @@
 }
 
 .w-100{
-    width: 100%
+    width: 100%;
 
+}
+
+.w-70{
+    width: 70%;
+}
+
+.w-30{
+    width: 30%
 }
 
 .h-60{
