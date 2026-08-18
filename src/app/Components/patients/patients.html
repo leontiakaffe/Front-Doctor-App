@@ -1,11 +1,109 @@
-<div class="patients-container light-pink">
-    <div class="first-box">
-        <button>+</button>
-        <input placeholder="Αναζήτηση ασθενή">
-        <p></p>
+<div class="main-div">
+<div class="card first-box ">
+    <div class="search-row">
+        <input type="text" class="search-input"  placeholder="Αναζήτηση ασθενή...">
     </div>
-    <div>
-        <p></p>
+    <div class="patient-items">
+            <!-- @for (patient of patients; track patient.amka) {
+      <div class="patient-item" [class.selected]="patient === selectedPatient" (click)="selectPatient(patient)">
+        <p class="patient-name">{{ patient.name }}</p>
+        <p class="patient-meta">Ηλικία: {{ patient.age }} · ΑΜΚΑ: {{ patient.amka }}***</p>
+      </div>
+    } -->
+      <p>Ασθενής Α</p>
+      <p>Ασθενής B</p>
+
+        </div>
+</div>
+
+<div class="card  second-box">
+    <h2 class="patient-title"></h2>
+
+    <div class="form-grid">
+        <div class="form-field">
+            <label>ΟΝΟΜΑ</label>
+            <input type="text" [(ngModel)]="patientfirstname" />
+        </div>
+        <div class="form-field">
+            <label>ΕΠΙΘΕΤΟ</label>
+            <input type="text" [(ngModel)]="patientlastname" />
+        </div>
+        <div class="form-field">
+      <label>ΑΜΚΑ</label>
+      <input type="text" [(ngModel)]="patientamka" />
+    </div>
+    <div class="form-field">
+      <label>ΦΥΛΟ</label>
+      <select [(ngModel)]="patientgender">
+        <option>Άνδρας</option>
+        <option>Γυναίκα</option>
+      </select>
+    </div>
+
+    <div class="form-field">
+      <label>ΗΜ/ΝΙΑ ΓΕΝΝΗΣΗΣ</label>
+      <input type="text" [(ngModel)]="patientage" />
+    </div>
+    <div class="form-field">
+      <label>ΕΠΙΚΟΙΝΩΝΙΑ</label>
+      <input type="text" [(ngModel)]="patientphone" />
+    </div>
+    </div>
+    
+    <h3>Ιστορικό</h3>
+    <table class="history-table">
+      <thead>
+        <tr>
+          <th>Ημερομηνία</th>
+          <th>Αιτία Επίσκεψης</th>
+          <th>Διάγννωση</th>
+          <th>Αγωγή</th>
+          <th>Τύπος ραντεβού</th>
+          <th>Σημειώσεις</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+        </tr>
+        <tr>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+        </tr>
+        <tr>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+        </tr>
+        <tr>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+          <td>Στοιχεία</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="buttons">
+      <button class="edit-btn">Επεξεργασία</button>
+      <button class="save-btn">Αποθήκευση</button>
+      <button class="cancel-btn">Διαγραφή</button>
     </div>
 </div>
+</div>
+
 

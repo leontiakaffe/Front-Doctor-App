@@ -1,17 +1,18 @@
-<div class="main-div">
-  
-  <mwl-calendar-month-view class="w-70"
+<div class="card calendar-card">
+<mwl-calendar-month-view class="w-70"
     [viewDate]="viewDate"
     [events]="events"
     (dayClicked)="dayClicked($event.day)">
   </mwl-calendar-month-view>
+</div>
 
 
-  <div class="misc-div light-pink w-30">
-    <div class="w-100 h-20 red">
+
+  <div class="side-bar light-pink w-30">
+    <div class=" card w-100 h-20 ">
       <h3>Μικρογραφία ημερολόγιου</h3>
     </div>
-    <div class="appointment-details w-100 h-20 light-pink">
+    <div class="card appointment-details w-100 h-20 ">
       <h3>Λεπτομέρειες</h3>
       @if (selectedDayEvents.length > 0) {
         @for (event of selectedDayEvents; track event.title) {
@@ -22,11 +23,27 @@
       }
     </div>
 
-    <div class="w-100 h-60 light-pink">
-      <h3>Εκκρεμότητες</h3>
+    <div class=" pending card w-100 h-60 ">
+      <div class="card-header">
+        <h3>Εκκρεμότητες</h3>
+        <button>+</button>
+      </div>
+      
+      <div class="write-event">
+        <input  type="text">
+        <button>OK</button>
+      </div>
+
+      <div class="status">
+        <p>Δεν υπάρχουν εκκρεμότητες</p>
+        <p>Δεν υπάρχουν εκκρεμότητες</p>
+        <p>Δεν υπάρχουν εκκρεμότητες</p>
+        <p>Δεν υπάρχουν εκκρεμότητες</p>
+      </div>
+      
     </div>
   </div>
-</div>
+
 
 
 

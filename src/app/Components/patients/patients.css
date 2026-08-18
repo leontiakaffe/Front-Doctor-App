@@ -1,11 +1,107 @@
-.patients-container{
+:host{
     display: flex;
-    height: 80%;
-    width: 80%;
-    
+    width: 100%;
+    height: 100%;
 }
 
-first-box{
-    height: 80vh;
-    width: 20vw;
+.first-box{
+    height: 90%;
+    width: 20%;
 }
+
+.second-box{
+  overflow: hidden;
+  position: relative;
+  height: 90%;
+  width: 80%;
+}
+
+.search-row {
+  display: flex;
+  align-items: center;
+  gap: 1%; 
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  border-radius: 20px;
+  background: #f4f3ef;
+  outline: none;
+}
+
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1% 2%;
+  margin-bottom: 1.5%;
+  height: 50%;
+  width: 100%;
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.75rem;
+  color: #a08a6b;
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.03em;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #e0ded6;
+  border-radius: 8px;
+  background: #f4f3ef;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.history-table{
+  display: table;
+  width: 100%;
+  height: 50%;
+}
+
+thead, tbody tr{
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+tbody{
+  display: block;
+  height: 40%; 
+  overflow-y: auto;
+}
+
+.history-table th{
+  text-align: left;
+  font-size: 50%;
+  color: #a08a6b;
+  font-weight: 400;
+  padding: 1% 2%;
+}
+
+.history-table td{
+  padding: 1% 2%;
+  border: 1px solid #f0efe9;
+}
+
+tbody{
+  overflow: scroll;
+}
+
+.buttons{
+  display: flex; 
+  gap: 2%;
+  padding: 2%;
+  margin-left: 70%;
+  position:absolute;
+  bottom: 2%;
+  right: 2%;
+  
+}
+

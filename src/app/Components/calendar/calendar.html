@@ -1,11 +1,17 @@
-<div class="top-nav light-pink pt2">
-  <button (click)="setTab('calendar-view')">Ημερολόγιο</button>
-  <button (click)="setTab('patients')">Ασθενείς</button>
-  <button (click)="setTab('statistics')">Στατιστικά</button>
-  <button (click)="setTab('pending')">Εκκρεμότητες</button>
+<div class="top-nav light-pink pt-2">
+  <div>MedPortal</div>
+
+  <div class="nav-tabs">
+    <button [class.active]="activeTab === 'calendar-view'" (click)="setTab('calendar-view')">Ημερολόγιο</button>
+    <button [class.active]="activeTab === 'patients'"  (click)="setTab('patients')">Ασθενείς</button>
+    <button [class.active]="activeTab === 'pending'" (click)="setTab('pending')">Εκκρεμότητες</button>
+    <button [class.active]="activeTab === 'statistics'"  (click)="setTab('statistics')">Στατιστικά</button>
+  </div>
+  
+  <button class="logout-btn">Αποσύνδεση</button>
 </div>
 
-<div class="main-content basic-green mb-4">
+<div class="main-content basic-green ">
   @if (activeTab === 'calendar-view') {
     <app-calendar-view></app-calendar-view>
   } @else if (activeTab === 'patients') {
